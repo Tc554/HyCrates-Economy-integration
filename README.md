@@ -71,9 +71,9 @@ override fun setup() {
         }
 
         if (method != null) {
-            val getBalance = { uuid: UUID -> /* Your method that returns the player's balance (Double) */ }
-            val withdraw = { uuid: UUID, amount: Double -> /* Your withdraw method */ }
-            val deposit = { uuid: UUID, amount: Double -> /* Your deposit method */ }
+            val getBalance = Function<UUID, Double> = Function { uuid -> /* Your method that returns the player's balance (Double) */ }
+            val withdraw = BiConsumer<UUID, Double> = BiConsumer { uuid, amount -> /* Your withdraw method */ }
+            val deposit = BiConsumer<UUID, Double> = BiConsumer { uuid, amount -> /* Your deposit method */ }
 
             method.isAccessible = true
             method.invoke(
