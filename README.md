@@ -31,7 +31,7 @@ public void setup() {
 
         if (method != null) {
             java.util.function.Function<UUID, Double> getBalance = uuid -> {
-                // Your method that returns the player's balance
+                // Your method that returns the player's balance (Double)
             };
 
             java.util.function.BiConsumer<UUID, Double> withdraw = (uuid, amount) -> {
